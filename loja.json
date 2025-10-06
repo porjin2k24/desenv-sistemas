@@ -1,0 +1,9 @@
+[
+    {
+        "id": 3,
+        "nome": "pao",
+        "quantidade": 6,
+        "preco": 6.0,
+        "em_estoque": true
+    }
+]
