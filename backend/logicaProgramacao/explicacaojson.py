@@ -65,4 +65,60 @@ if not produto_encontrado:
 
 else:
     with open("loja.json","w") as arquivo:
-        json.dump(inventario,arquivo,indent= 4)
+        json.dump(inventario, arquivo , indent = 4)
+print("O arquivo foi alterado com sucesso!")
+
+
+
+#excluir produtos no json
+
+try:
+    with open("loja.json", "r") as arquivo:
+        inventario = json.load(arquivo)
+
+exept FileNotFoundError:
+    print("Arquivo não encontrado")
+
+
+novo_inventario = []
+produto_excluido = False
+
+id_peoduto_excluir = int(input("digite o  id do produto para excluir "))
+
+for produto in inventario:
+    if produto["id"]   != id_produto_excluir
+    #se o id for diferente adicionamos  a nova lista novo_inventario.append (produto)
+
+    else:
+        print("produto removido com sucesso!!")
+        produto_excluido = True
+
+
+if not produto_excluido:
+    print("o id do produto não foi encontrado")
+
+else:
+    with open ("loja.json", "w") as arquivo:
+        json.dump(novo_inventario, arquivo, indent = 4)
+    print("O arquivo foi atualizado, produto removido")
+
+    #listar produtos do arquivo json
+
+try:
+    with open ("loja.json", "r") as arquivo:
+        inventario = json.load(arquivo)
+
+    if not inventario:
+        print("o arquivo está vazio!")
+
+    else:
+        print("-----lista de produtos no inventario-----")
+        for produto in inventario:
+            print(f"\n--produto{produto.get("id")}-")
+            print(f"nome:{produto.get("nome_produto", "n/a")}")
+            print(f"preço:{produto.get("preco_unitario", 0):.2f}")
+            print(f"quantidade:{produto.get("quantidade", 0)}unidades")
+            print(f"em estoque:{produto.get("em_estoque")}")
+
+exept FileNotFoundError:
+    print("arquivo não encontrado")
