@@ -1,4 +1,10 @@
-#django-admin startproject nome do projeto
-#python manage.py startapp nome do app
- python manage.py makemigrations
- python manage.py migrate
+Comandos.txt
+django-admin startproject nome do projeto --> criar o projeto
+
+python manage.py startapp nome do app --> Criar app
+
+Python manage.py makemigrations --> Gera as atualizações da model
+
+Python manage.py migrate --> Aplica Alterações
+
+Python manage.py runserver --> Roda o projeto
